@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
-	audiojs.events.ready(function() {
-    	var as = audiojs.createAll();
-  	});
+	// audiojs.events.ready(function() {
+ //    	var as = audiojs.createAll();
+ //  	});
 
 	// Navbar
 
@@ -21,8 +21,16 @@ jQuery(document).ready(function(){
         });
     });
 
- $('.single-item-rtl').slick({
-  rtl: true
-});
-    
+      jQuery('#toggler').on('click', function(){
+    if (jQuery(this).hasClass("yellow")) {
+      jQuery('.mobileNav').slideUp('slow');
+      jQuery(this).removeClass('yellow');
+    } else {
+      jQuery('.mobileNav').slideDown('slow');
+      jQuery(this).addClass('yellow');
+    }
+  });
+
+    $( function() { $( 'audio' ).audioPlayer(); } );
+
 });

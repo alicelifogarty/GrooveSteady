@@ -126,6 +126,10 @@ p {
     text-decoration: none;
 }
 
+.mobileNav {
+    display:none;
+}
+
 /* Hero */
 
 .hero {
@@ -169,6 +173,12 @@ i {
 .music p {
     color: #EFF6EE;
     text-align: center;
+}
+
+.audioWrapper {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom:15px;
 }
 
 /* About */
@@ -232,7 +242,7 @@ i {
 }
 
 .quote {
-    padding: 90px 150px 100px 300px;
+    padding: 90px 150px 100px 200px;
     color:#EFF6EE;
 }
 
@@ -300,3 +310,142 @@ footer p {
 footer img {
     padding:20px 10px 10px 10px;
 }
+
+@media screen and (max-width:860px) {
+
+    .container {
+        max-width:700px;
+    }
+
+    .mainNav {
+        display:none;
+    }
+
+
+    #toggler {
+        display: inline;
+        float: right;
+        text-align: right;
+        color:#EFF6EE;
+        font-size: 25px;
+    }
+
+    #toggler.yellow {
+        color:#F4D06F;
+    }
+
+    .mobileNav {
+        float:none;
+        text-align: center;
+        overflow:hidden;
+        padding: 10px 0;
+        line-height: 1.2;
+        background-color:rgba(11,19,43,.85);
+        border-left: solid 1px #999999;
+    }
+
+    .navbar .mobileNav li {
+    float: none;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size:40px;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    .audioWrapper {
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .col.left {
+        width:100%;
+        padding-right:0;
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .col.right {
+        width:100%;
+        padding: 20px 0 80px 0;
+    }
+
+    .ru {
+        width:100%;
+    }
+
+    .quote {
+        padding: 90px 90px 100px 100px;
+    }
+
+}
+
+@media screen and (max-width:715px) {
+
+    .container {
+        max-width:600px;
+    }
+
+    .navbar nav a {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+
+    .container {
+        max-width:300px;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    #toggler {
+        font-size: 20px;
+    }
+
+    .navbar nav a {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    form.form-horizontal {
+        padding: 20px 0;
+    }
+
+    a.left.carousel-control,
+    a.right.carousel-control{
+        width:5%;
+    }
+
+    .quote {
+        padding: 20px 21px 20px 30px;
+    }
+
+    span.reviewer {
+        padding-bottom: 20px;
+    }
+
+}
+

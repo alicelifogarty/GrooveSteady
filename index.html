@@ -8,14 +8,22 @@
 	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i" rel="stylesheet">
 	<link rel="stylesheet" href="css/slick.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/audioplayer.css" />
 	<link rel="stylesheet" href="css/styles.css" />	
+			<script>
+			/*
+				VIEWPORT BUG FIX
+				iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+			*/
+			(function(doc){var addEvent='addEventListener',type='gesturestart',qsa='querySelectorAll',scales=[1,1],meta=qsa in doc?doc[qsa]('meta[name=viewport]'):[];function fix(){meta.content='width=device-width,minimum-scale='+scales[0]+',maximum-scale='+scales[1];doc.removeEventListener(type,fix,true);}if((meta=meta[meta.length-1])&&addEvent in doc){fix();scales=[.25,1.6];doc[addEvent](type,fix,true);}}(document));
+		</script>
 </head>
 <body>
 
 	<div class="clearfix navbar">
 		<div class="container">
 			<h1>groove steady</h1>
-			<nav>
+			<nav class="mainNav">
 				<ul>
 					<li><a href="#contact">contact</a></li>
 					<li><a href="#endorsements">endorsements</a></li>
@@ -23,7 +31,16 @@
 					<li><a href="#music">music</a></li>	
 				</ul>
 			</nav>
+			<span id="toggler">&#9776;</span>
 		</div> <!--closes container-->
+		<nav class="mobileNav">
+		<ul>
+				<li><a href="#music">music</a></li>
+				<li><a href="#about">about</a></li>
+				<li><a href="#endorsements">endorsements</a></li>	
+				<li><a href="#contact">contact</a></li>
+		</ul>
+		</nav>
 	</div> <!-- closes navbar and clearfix -->
 
 	<div id="hero" class="hero">
@@ -35,11 +52,24 @@
 		<div class="container">
 			<h2><span class="border">Music</span></h2>
 			<p>High Energy Club / Techno / EDM</p>
-			<audio src="music/01.mp3" preload="auto" />
-<!-- 			<p>Party Quick-Mix (Clean)</p>
-			<audio src="music/call.mp3" preload="auto" />
+			<div class="audioWrapper">
+				<audio preload="auto" controls>
+					<source src="music/01.mp3">
+				</audio>
+			</div> <!-- closes audioWrapper -->
+<!-- 			<audio src="music/01.mp3" preload="auto" /> -->
+			<p>Party Quick-Mix (Clean)</p>
+			<div class="audioWrapper">
+				<audio preload="auto" controls>
+					<source src="music/rain.mp3">
+				</audio>
+			</div> <!-- closes audioWrapper -->
 			<p>Ball-So-Hard Mix (Explicit)</p>
-			<audio src="music/rain.mp3" preload="auto" /> -->
+			<div class="audioWrapper">
+				<audio preload="auto" controls>
+					<source src="music/call.mp3">
+				</audio>
+			</div> <!-- closes audioWrapper -->
 		</div> <!-- closes container -->
 	</div> <!-- closes music -->
 
@@ -64,11 +94,6 @@
 	<div id="endorsements" class="endorsements section">
 		<div class="container">
 			<h2><span class="border">Endorsements</span></h2>
-<!-- 			<div class="single-item-rtl" dir="rtl">
-				<div>Endorsement 1</div>
-				<div>Endorsement 2</div>
-				<div>Endorsement 3</div>
-			</div> --> <!-- closes slick -->
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
@@ -159,10 +184,10 @@
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="js/audiojs/audio.min.js"></script>
+	<!-- <script src="js/audiojs/audio.min.js"></script> -->
 	<script src="https://use.fontawesome.com/c02e9ce22b.js"></script>
-	<script src="js/slick.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/audioplayer.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
